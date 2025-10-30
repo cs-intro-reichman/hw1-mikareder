@@ -20,6 +20,9 @@ public class TimeFormat {
 				if(minutes==0){
 					System.out.println(hours+":00 "+time);
 				}
+				else if(minutes>0&& minutes<9){
+					System.out.println(hours+":0"+minutes+" "+time);
+				}
 				else{
 					System.out.println(hours+":"+minutes+" "+time);
 				}	
@@ -27,8 +30,17 @@ public class TimeFormat {
 		}
 		else{
 			time="AM";
+			if(hours>0 && hours<10){
+				System.out.print("0"+hours);
+			}
 			if(minutes==0){
-				System.out.println(hours+":00 "+time);
+				System.out.print(":00 "+time);
+			}
+			else if(minutes>0&& minutes<9){
+					System.out.print(":0"+minutes+" "+time);
+			}
+			else{
+				System.out.print(":"+minutes+" "+time);
 			}
 		}
 		

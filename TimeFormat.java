@@ -30,8 +30,11 @@ public class TimeFormat {
 		}
 		else{
 			time="AM";
-			if(hours>0 && hours<10){
+			if(hours>=0 && hours<10){
 				System.out.print("0"+hours);
+			}
+			else{
+				System.out.print(hours);
 			}
 			if(minutes==0){
 				System.out.print(":00 "+time);

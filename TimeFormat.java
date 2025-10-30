@@ -30,6 +30,9 @@ public class TimeFormat {
 		}
 		else{
 			time="AM";
+			if(hours==12){
+				time="PM";
+			}
 			if(hours>=0 && hours<10){
 				System.out.print("0"+hours);
 			}
